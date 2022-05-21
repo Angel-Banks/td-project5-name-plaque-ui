@@ -67,7 +67,7 @@ input {
   margin-left: 85%;
 }
 
-#name {
+.name {
   background-color: white;
   width: 17rem;
   height: 3rem;
