@@ -101,6 +101,7 @@ button {
   height: 2rem;
   color: white;
   border-radius: 10%;
+  cursor:pointer;
 }
 
 footer {
