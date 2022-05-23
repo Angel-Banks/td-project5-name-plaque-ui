@@ -20,14 +20,16 @@ var guess = document.querySelector(".guess");
 if (guess.value === ''){
      output.textContent='Total:$0' ;
 
-} else if (guess.value===outPut){
+} else if (guess.value.length < 16){
+  alertMessage.textContent = "🚩Congratulations, you entered a unique letter!"
+  alertMessage.style.color = "#CE49BF";
+ }
+
+
+else if (guess.value===outPut){
   output.textContent='Total:$'+ outPut.replaceAll(' ', '').length*5 ;
 
 }
-// else if{output.Content='Total:$75'){
-//   alertMessage.textContent = "🚩Congratulations, you entered a unique letter!";
-//  alertMessage.style.color = "#68A7AD";
-// }
 
    });
 
