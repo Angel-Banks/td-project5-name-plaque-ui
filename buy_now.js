@@ -34,7 +34,6 @@ if (guess.value === ''){
 // else if (guess.value===outPut){
 //   output.textContent='Total:$'+ outPut.replaceAll(' ', '').length*5 ;
 
-}
 
    });
 
