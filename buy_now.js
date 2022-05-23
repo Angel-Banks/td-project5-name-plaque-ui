@@ -1,72 +1,44 @@
-var message = document.querySelector("#sub-heading");
-var btn = document.querySelector(".btn");
+var alertMessage = document.querySelector("#sub-heading");
+var buyNow = document.querySelector(".btn");
 var guess = document.querySelector(".guess");
-  var yourName = document.querySelector(".name");
+  var nameSpace = document.querySelector(".name");
   var output = document.querySelector(".output");
-
-  // guess.oninput = (e) =>{
-  //
-  //       var urName =  e.target.value;
-  //     yourName.textContent = urName;
-  //
-  //     var outPut = '$' + urName.replaceAll(' ', '').length*5;
-  //      output.textContent = outPut;
-  // };
+  var reFresh = document.querySelector("#btn");
 
 
-  guess.addEventListener("input", function(e){
-
-        var urName =  e.target.value;
-      yourName.textContent = urName;
+  guess.addEventListener("input", function(){
+        nameSpace.textContent = guess.value;
 
 
   });
 
-    btn.addEventListener("click", function(e) {
-      var outPut = '$' + urName.replaceAll(' ', '').length*5;
-       output.textContent = outPut;
 
-  });
-  // function buttonAnimation (currentKey) {
-  //   var activeButton = document.querySelector ("." + currentKey) ;
-  //   activeButton.classList.add ("pressed");
-  //   setTimeout(function (){
-  //     activeButton.classList.remove ("pressed");
-  //   }, 100);
-  //
-  // }
-  //
-// // Refactoring with Arrow Function
-//   var countLetters = (data) => {
-//   yourName.textContent = data
-//   var price = data.replaceAll(' ', '').length * 5; // price of each letter
-//
-//   output.textContent = 'Total:$' + price
-// }
-//
-//   guess.oninput = (e) => {
-//    countLetters(e.target.value)
+   buyNow.addEventListener ('click', function buyNow(){
+  var outPut = guess.value;
+
+
+if (guess.value === ''){
+     output.textContent='Total:$0' ;
+
+} else if (guess.value===outPut){
+  output.textContent='Total:$'+ outPut.replaceAll(' ', '').length*5 ;
+
+}
+// else if{output.Content='Total:$75'){
+//   alertMessage.textContent = "🚩Congratulations, you entered a unique letter!";
+//  alertMessage.style.color = "#68A7AD";
 // }
 
-//
-// function countLetters (data){
-//
-//   var price = data.replaceAll(' ', '').length * 5; // price of each letter
-//   yourName.textContent = data
-//   output.textContent = 'Total:$'+ price
-// }
-//
-// guess.addEventListener("input", function(e){
-//     countLetters(e.target.value)
-// });
+   });
 
 
-//
-// guess.addEventListener("input", function(e){
-//
-//       var urName =  e.target.value;
-//     yourName.textContent = urName;
-//
-//     var outPut = '$' + urName.replaceAll(' ', '').length*5;
-//      output.textContent = outPut;
-// });
+
+ reFresh.addEventListener ('click', function resetPlaque(){
+
+    guess.value = '';
+    nameSpace.textContent = 'Your Name';
+    output.textContent='Total:$0';
+   alertMessage.textContent = "You are yet to type in a name";
+    alertMessage.style.color = "#68A7AD";
+    // window.location.reload();
+ });

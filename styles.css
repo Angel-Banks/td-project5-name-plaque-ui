@@ -98,14 +98,27 @@ input {
 button {
   background-color: #00AFC1;
   width: 6rem;
-  height: 2rem;
+  height: 2.5rem;
+
   color: white;
   border-radius: 10%;
   cursor:pointer;
+  margin-bottom: 34px;
+
+}
+
+#btn {
+  background-color: #F9F3EE;
+  color:  #112B3C;
+}
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
 }
 
 footer {
-  margin-top: 2%;
+  margin-top: 1px;
   color: #EEEEEE;
   text-align: center;
   /* font-family: 'Indie Flower', cursive; */
