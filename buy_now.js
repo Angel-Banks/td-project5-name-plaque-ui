@@ -21,13 +21,18 @@ if (guess.value === ''){
      output.textContent='Total:$0' ;
 
 } else if (guess.value.length < 16){
+  output.textContent='Total:$'+ outPut.replaceAll(' ', '').length*5 ;
+
   alertMessage.textContent = "🚩Congratulations, you entered a unique letter!"
   alertMessage.style.color = "#CE49BF";
- }
 
+} else if (guess.value.length > 15){
+   alertMessage.textContent = "Oops, you have exceeded the number of available letters!"
+   alertMessage.style.color = "#B22727";
+  }
 
-else if (guess.value===outPut){
-  output.textContent='Total:$'+ outPut.replaceAll(' ', '').length*5 ;
+// else if (guess.value===outPut){
+//   output.textContent='Total:$'+ outPut.replaceAll(' ', '').length*5 ;
 
 }
 
