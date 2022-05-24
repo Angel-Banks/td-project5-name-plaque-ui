@@ -1,21 +1,22 @@
 var alertMessage = document.querySelector("#sub-heading");
-var buyNow = document.querySelector(".btn");
+var buyButton = document.querySelector(".btn");
 var guess = document.querySelector(".guess");
 var nameSpace = document.querySelector(".name");
 var output = document.querySelector(".output");
-var resetPlaque = document.querySelector("#btn");
+var resetButton = document.querySelector("#btn");
 
-// userInput.oninput = (e)=>{
+// The guess function
 
 guess.oninput = () => {
   nameSpace.textContent = guess.value;
 
 };
 
-// buyNow.addEventListener('click', function buyNow() {
-  var buyNow = buyNow.onclick= () => {
 
+// The buyNow function
 
+  var buyNow = buyButton.onclick= () => {
+    // buyButton.addEventListener('click', function buyNow() {
   var outPut = guess.value;
 
   if (guess.value === '') {
@@ -36,12 +37,11 @@ guess.oninput = () => {
 
 };
 
-// var resetPlaque = () => {
 
-var resetPlaque = resetPlaque.onclick= () => {
+// The Reset function
 
-// resetPlaque.addEventListener('click', function resetPlaque() {
-
+var resetPlaque = resetButton.onclick= () => {
+// resetButton.addEventListener('click', function resetPlaque() {
   guess.value = '';
   nameSpace.textContent = 'Your Name';
   output.textContent = 'Total:$0';
@@ -50,10 +50,6 @@ var resetPlaque = resetPlaque.onclick= () => {
   // window.location.reload();
 };
 
-// guess.addEventListener("input", function(){
-//   nameSpace.textContent = guess.value;
-//
-// });
 
 
 
