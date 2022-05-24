@@ -12,8 +12,9 @@ guess.oninput = () => {
 
 };
 
+// buyNow.addEventListener('click', function buyNow() {
+  var buyNow = buyNow.onclick= () => {
 
-buyNow.addEventListener('click', function buyNow() {
 
   var outPut = guess.value;
 
@@ -33,11 +34,13 @@ buyNow.addEventListener('click', function buyNow() {
     alertMessage.style.color = "#B22727";
   }
 
-});
+};
 
 // var resetPlaque = () => {
 
-resetPlaque.addEventListener('click', function resetPlaque() {
+var resetPlaque = resetPlaque.onclick= () => {
+
+// resetPlaque.addEventListener('click', function resetPlaque() {
 
   guess.value = '';
   nameSpace.textContent = 'Your Name';
@@ -45,7 +48,7 @@ resetPlaque.addEventListener('click', function resetPlaque() {
   alertMessage.textContent = "You are yet to type in a name";
   alertMessage.style.color = "#68A7AD";
   // window.location.reload();
-});
+};
 
 // guess.addEventListener("input", function(){
 //   nameSpace.textContent = guess.value;
