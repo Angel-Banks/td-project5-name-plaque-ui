@@ -3,19 +3,19 @@ var buyNow = document.querySelector(".btn");
 var guess = document.querySelector(".guess");
 var nameSpace = document.querySelector(".name");
 var output = document.querySelector(".output");
-var reFresh = document.querySelector("#btn");
+var resetPlaque = document.querySelector("#btn");
 
+// userInput.oninput = (e)=>{
 
-guess.addEventListener("input", function() {
+guess.oninput = () => {
   nameSpace.textContent = guess.value;
 
-
-});
+};
 
 
 buyNow.addEventListener('click', function buyNow() {
-  var outPut = guess.value;
 
+  var outPut = guess.value;
 
   if (guess.value === '') {
     output.textContent = 'Total:$0';
@@ -35,9 +35,9 @@ buyNow.addEventListener('click', function buyNow() {
 
 });
 
+// var resetPlaque = () => {
 
-
-reFresh.addEventListener('click', function resetPlaque() {
+resetPlaque.addEventListener('click', function resetPlaque() {
 
   guess.value = '';
   nameSpace.textContent = 'Your Name';
@@ -46,3 +46,19 @@ reFresh.addEventListener('click', function resetPlaque() {
   alertMessage.style.color = "#68A7AD";
   // window.location.reload();
 });
+
+// guess.addEventListener("input", function(){
+//   nameSpace.textContent = guess.value;
+//
+// });
+
+
+
+// function () {
+//   var activeButton = document.querySelector (".btn") ;
+//   activeButton.classList.add ("pressed")
+//   setTimeout(function (){
+//     activeButton.classList.remove ("pressed");
+//   }, 100);
+//
+// }
