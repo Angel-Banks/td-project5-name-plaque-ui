@@ -8,6 +8,7 @@ var resetButton = document.querySelector("#btn");
 // The guess function
 
 guess.oninput = () => {
+  // guess.addEventListener ("input", function(){
   nameSpace.textContent = guess.value;
 
 };
@@ -23,11 +24,6 @@ var buyNow = buyButton.onclick = () => {
   }, 100);
 
   var outPut = guess.value;
-
-  buyButton.classList.add("pressed")
-  setTimeout(function() {
-    buyButton.classList.remove("pressed");
-  }, 100);
 
 
   if (outPut === '') {
